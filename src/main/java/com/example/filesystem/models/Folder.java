@@ -16,11 +16,11 @@ public class Folder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
+
     @Column(name="title")
     private String title;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "folder")
     private List<File> files;
 
     @JsonIgnoreProperties("folders")

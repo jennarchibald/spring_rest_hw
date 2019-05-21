@@ -13,10 +13,13 @@ public class File {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
+
     @Column(name="name")
     private String name;
+
     @Column(name="extension")
     private FileExtension extension;
+
     @Column(name="size")
     private int size;
 
